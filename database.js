@@ -7,7 +7,7 @@ const pool = mysql.createPool({
   port: Number(process.env.DB_PORT || 3306),
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || '',
-  database: process.env.DB_NAME || 'brazil_counts',
+  database: process.env.DB_NAME || 'brazil-counts',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
@@ -16,9 +16,7 @@ const pool = mysql.createPool({
 async function testConnection() {
   try {
     const [rows] = await pool.query('SELECT 1 AS ok');
-    if (rows[0].ok === 1) {
-      console.log('MySQL conectado: brazil_counts');
-    }
+    if (rows[0].ok === 1) { console.log('MySQL conectado: brazil-counts'); }
   } catch (err) {
     console.error('Erro ao conectar no MySQL:', err.message);
     console.error('Verifique o .env e se o MySQL está rodando');

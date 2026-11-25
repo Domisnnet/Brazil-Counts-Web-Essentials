@@ -16,8 +16,7 @@ app.get('/api/estados', async (req, res) => {
     let sql = 'SELECT * FROM estados WHERE 1 = 1';
     const params = [];
     if (regiao) { sql += ' AND regiao = ?'; params.push(regiao); }
-    if (busca) {
-      sql += ' AND (nome LIKE ? OR sigla = ? OR capital LIKE ?)';
+    if (busca) { sql += ' AND (nome LIKE ? OR sigla = ? OR capital LIKE ?)';
       const termo = `%${busca}%`;
       params.push(termo, busca.toUpperCase(), termo);
     }
