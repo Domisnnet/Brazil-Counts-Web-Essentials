@@ -20,7 +20,7 @@ app.get('/api/estados', async (req, res) => {
       const termo = `%${busca}%`;
       params.push(termo, busca.toUpperCase(), termo);
     }
-    const ordenacoesPermitidas = {  // Ordenação - só aceita valores permitidos, evita SQL Injection
+    const ordenacoesPermitidas = {  // Ordenação - só aceita valores permitidos , evita SQL Injection
       populacao_desc: 'populacao DESC',
       populacao_asc: 'populacao ASC',
       nome_asc: 'nome ASC',
