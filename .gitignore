@@ -1,0 +1,24 @@
+# Brazil Counts - Web Essentials
+# NUNCA subir esses arquivos pro GitHub
+
+# Dependências - geradas pelo npm install
+node_modules/
+
+# Segredos - senha do MySQL, chaves, tokens
+.env
+.env.local
+.env.*.local
+
+# Sessão do SQLTools - tem credencial dentro
+*.session.sql
+
+# VS Code - config local, cada dev tem a sua
+.vscode/*
+
+# Logs
+npm-debug.log*
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db

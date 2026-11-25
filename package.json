@@ -1,0 +1,12 @@
+{
+  "name": "brazil-counts",
+  "version": "1.0.0",
+  "description": "Brazil Counts - Web Essentials. Populacao, dos 27 Estados.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": { "start": "node server.js", "dev": "node --watch server.js" },
+  "keywords": [ "brazil", "population", "dashboard", "web-essentials" ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": { "cors": "^2.8.5", "dotenv": "^16.4.5", "express": "^5.1.0", "mysql2": "^3.14.1" }
+}
