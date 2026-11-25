@@ -1,7 +1,3 @@
--- ============================================
--- Script para criar e popular a tabela 'estados'
--- ============================================
-
 -- 1. Criação da tabela
 CREATE TABLE IF NOT EXISTS estados (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
