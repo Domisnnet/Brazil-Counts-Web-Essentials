@@ -11,7 +11,7 @@
 ![Data](https://img.shields.io/badge/Data-JSON-yellow?style=flat-square)
 ![Imagem Dashboard](src/assets/images/brazil.png)
 
-> Bem-vindo ao `Brazil Counts!` Uma solução de Business Intelligence `Open Source` desenvolvida para visualizar a população dos estados brasileiros. O projeto visa resolver a dor de comparar população por estado e por região sem precisar abrir planilha, utilizando dados do `IBGE - Estimativas 2024.`
+> Bem-vindo ao `Brazil Counts!` Uma solução de Business Intelligence `Open Source` desenvolvida para visualizar a população dos estados brasileiros. O projeto visa resolver a dor de comparar população por estado e por região sem precisar abrir planilha, utilizando dados do `IBGE - Estimativas de 2024.`
 
 ---
 
@@ -105,17 +105,17 @@ Cards com `backdrop-filter: blur(16px)`, borda de `2px` e `border-radius: 20px`.
 Brazil-Counts-Web-Essentials
 ├── src/
 │   └── assets/
-│       ├── index.html          📌 Estrutura do dashboard.
-│       ├── 404.html            📌 Página de erro com mesmo header e toggle.
+│       ├── index.html        📌 Estrutura do dashboard.
+│       ├── 404.html          📌 Página de erro com mesmo header e toggle.
 │       ├── css/
-│       │   └── style.css       📌 Estilo, Glasmorphism e responsivo.
+│       │   └── style.css     📌 Estilo, Glasmorphism e responsivo.
 │       ├── js/
-│       │   └── app.js          📌 Lógica, filtros, KPIs, gráficos e tabela.
+│       │   └── app.js        📌 Lógica, filtros, KPIs, gráficos e tabela.
 │       ├── data/
-│       │   └── estados.json    📌 27 estados com nome, sigla, capital, região e população.
+│       │   └── estados.json  📌 27 estados com nome, sigla, capital, região e população.
 │       └── images/
-│           └── logo.png        📌 Logo do Brazil Counts.
-└── README.md                   📌 Documentação Técnica.
+│           └── logo.png      📌 Logo do Brazil Counts.
+└── README.md                 📌 Documentação Técnica.
 ```
 
 ---
@@ -146,7 +146,7 @@ Se algo não estiver funcionando como esperado, não hesite em abrir um chamado:
 <details>
 <summary><strong>Os dados são reais ou fictícios ❓</strong></summary>
 <p>
-  📊 <strong>Resposta:</strong> Os dados utilizados são os do <code>IBGE - Estimativas 2024</code>, em <code>estados.json</code>, para fins de demonstração e estudo de técnicas de BI.
+  📊 <strong>Resposta:</strong> Os dados utilizados são os do <code>IBGE - Estimativas de 2024</code>, em <code>estados.json</code>, para fins de demonstração e estudo de técnicas de BI.
 </p>
 </details>
 
@@ -181,7 +181,7 @@ O **Brazil Counts** é resultado de estudo contínuo em Web Essentials e BI:
 | Atribuição | Responsável / Recurso | Descrição |
 | :--- | :--- | :--- |
 | **Análise de Dados** | **DomisDev** | Exploração, limpeza e visualização dos datasets. |
-| **Empresa:** | | **Brazil Counts** | Contexto de negócio e origem dos dados. |
+| **Empresa:** | **Brazil Counts** | Contexto de negócio e origem dos dados. |
 | **Engine Gráfica** | **CSS + conic-gradient** | Base para renderização da pizza por região. |
 | **Manipulação** | **JavaScript puro** | Filtros, KPIs, barras, pizza e tabela. |
 | **Apoio Técnico** | **Google Gemini** | Padronização e refinamento documental. |
