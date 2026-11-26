@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 - Página não encontrada | Brazil Counts</title>
+  <title>404 - Página não encontrada</title>
+  <link rel="stylesheet" href="/src/assets/css/style.css" />
   <link rel="stylesheet" href="/src/assets/css/404.css" />
 </head>
 <body>
   <header class="topo">
     <div class="topo">
-      <img class="logo" src="src/assets/images/logo.png" alt="">
+      <img class="logo" src="/src/assets/images/logo.png" alt="Brazil Counts" />
       <h1>População dos Estados Brasileiros</h1>
     </div>
-    <button id="toggle-theme">
+    <button id="toggle-theme" aria-label="Alternar tema">
       <svg
         class="icon sun"
         xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +30,7 @@
         <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
         <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
         <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="23"></line>
         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
       </svg>
@@ -59,7 +60,7 @@
       <a href="/" class="btn-voltar">← Voltar para o Dashboard</a>
     </div>
   </main>
-  <script src="src/assets/js/app.js"></script>
+  <script src="src/assets/js/404.js"></script>
   <footer class="rodape">
     <div>
       <h3>© 2026 Brazil Counts - Todos os Direitos Reservados • Fonte: IBGE Estimativas 2024</h3>
