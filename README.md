@@ -181,7 +181,7 @@ O **Brazil Counts** é resultado de estudo contínuo em Web Essentials e BI:
 | Atribuição | Responsável / Recurso | Descrição |
 | :--- | :--- | :--- |
 | **Análise de Dados** | **DomisDev** | Exploração, limpeza e visualização dos datasets. |
-| **Empresa:** | **Brazil Counts** | Contexto de negócio e origem dos dados. |
+| **Referência** | **Brazil Counts** | Contexto de negócio e origem dos dados. |
 | **Engine Gráfica** | **CSS + conic-gradient** | Base para renderização da pizza por região. |
 | **Manipulação** | **JavaScript puro** | Filtros, KPIs, barras, pizza e tabela. |
 | **Apoio Técnico** | **Google Gemini** | Padronização e refinamento documental. |
