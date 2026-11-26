@@ -17,17 +17,17 @@ body {
   align-items: center;
   background: #0f172a;
   color: #fff;
-  padding: 15px;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 
 .topo h1 { margin-left: 20px; font-size: 1.5rem; }
-
-.topo p { margin-left: 30px; opacity: .7; font-size: 1rem; }
 
 .logo {
   display: flex;
   align-items: center;
   width: 40px;
+  margin-left: 20px;
 }
 
 #toggle-theme {
@@ -36,7 +36,7 @@ body {
   justify-content: center;
   width: 44px;
   height: 44px;
-  margin-right: 20px;
+  margin-right: 30px;
   border: 2px;
   border-radius: 50%;
   background: #1e293b;
@@ -51,7 +51,7 @@ body.dark-mode #toggle-theme .icon.sun { display: block; }
 body.dark-mode #toggle-theme .icon.moon { display: none; }
 body.dark-mode #toggle-theme { background: #ffffffc5; color: #0f172a; }
 
-.container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+.container { flex: 1; max-width: 1200px; margin: 0 auto; padding: 24px; }
 
 .filtros { display: flex; gap: 12px; align-items: center; margin-bottom: 20px; }
 
@@ -90,7 +90,8 @@ body.dark-mode .filtros select { background: #16213a; color: #fff; border-color:
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 0 auto;
+  padding: 25px;
   background: #0f172a;
   color: #fff;
-  padding: 20px 32px;
 }

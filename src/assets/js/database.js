@@ -14,8 +14,7 @@ const pool = mysql.createPool({
 });
 
 async function testConnection() {
-  try {
-    const [rows] = await pool.query('SELECT 1 AS ok');
+  try { const [rows] = await pool.query('SELECT 1 AS ok');
     if (rows[0].ok === 1) { console.log('MySQL conectado: brazil-counts'); }
   } catch (err) {
     console.error('Erro ao conectar no MySQL:', err.message);

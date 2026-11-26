@@ -1,0 +1,32 @@
+{
+  "meta": { "fonte": "IBGE - Estimativas da População de 2024" },
+  "estados": [
+    { "nome": "São Paulo", "sigla": "SP", "capital": "São Paulo", "regiao": "Sudeste", "populacao": 46081946, "pib_bilhoes": 3140.0, "idh": 0.806, "densidade_km2": 185.0 },
+    { "nome": "Minas Gerais", "sigla": "MG", "capital": "Belo Horizonte", "regiao": "Sudeste", "populacao": 21322691, "pib_bilhoes": 1005.0, "idh": 0.774, "densidade_km2": 36.0 },
+    { "nome": "Rio de Janeiro", "sigla": "RJ", "capital": "Rio de Janeiro", "regiao": "Sudeste", "populacao": 17219363, "pib_bilhoes": 1050.0, "idh": 0.762, "densidade_km2": 394.0 },
+    { "nome": "Bahia", "sigla": "BA", "capital": "Salvador", "regiao": "Nordeste", "populacao": 14850513, "pib_bilhoes": 420.0, "idh": 0.714, "densidade_km2": 26.0 },
+    { "nome": "Paraná", "sigla": "PR", "capital": "Curitiba", "regiao": "Sul", "populacao": 11824665, "pib_bilhoes": 665.0, "idh": 0.769, "densidade_km2": 59.0 },
+    { "nome": "Rio Grande do Sul", "sigla": "RS", "capital": "Porto Alegre", "regiao": "Sul", "populacao": 11466652, "pib_bilhoes": 640.0, "idh": 0.771, "densidade_km2": 40.0 },
+    { "nome": "Pernambuco", "sigla": "PE", "capital": "Recife", "regiao": "Nordeste", "populacao": 9539029, "pib_bilhoes": 268.0, "idh": 0.719, "densidade_km2": 97.0 },
+    { "nome": "Ceará", "sigla": "CE", "capital": "Fortaleza", "regiao": "Nordeste", "populacao": 9132078, "pib_bilhoes": 225.0, "idh": 0.734, "densidade_km2": 61.0 },
+    { "nome": "Pará", "sigla": "PA", "capital": "Belém", "regiao": "Norte", "populacao": 8664306, "pib_bilhoes": 262.0, "idh": 0.69, "densidade_km2": 6.9 },
+    { "nome": "Santa Catarina", "sigla": "SC", "capital": "Florianópolis", "regiao": "Sul", "populacao": 8121570, "pib_bilhoes": 514.0, "idh": 0.792, "densidade_km2": 84.0 },
+    { "nome": "Goiás", "sigla": "GO", "capital": "Goiânia", "regiao": "Centro-Oeste", "populacao": 7270707, "pib_bilhoes": 318.0, "idh": 0.769, "densidade_km2": 21.0 },
+    { "nome": "Maranhão", "sigla": "MA", "capital": "São Luís", "regiao": "Nordeste", "populacao": 7153262, "pib_bilhoes": 145.0, "idh": 0.687, "densidade_km2": 21.0 },
+    { "nome": "Paraíba", "sigla": "PB", "capital": "João Pessoa", "regiao": "Nordeste", "populacao": 4145040, "pib_bilhoes": 90.0, "idh": 0.722, "densidade_km2": 73.0 },
+    { "nome": "Amazonas", "sigla": "AM", "capital": "Manaus", "regiao": "Norte", "populacao": 4285776, "pib_bilhoes": 150.0, "idh": 0.733, "densidade_km2": 2.7 },
+    { "nome": "Espírito Santo", "sigla": "ES", "capital": "Vitória", "regiao": "Sudeste", "populacao": 4108508, "pib_bilhoes": 192.0, "idh": 0.771, "densidade_km2": 89.0 },
+    { "nome": "Mato Grosso", "sigla": "MT", "capital": "Cuiabá", "regiao": "Centro-Oeste", "populacao": 3780679, "pib_bilhoes": 268.0, "idh": 0.774, "densidade_km2": 4.1 },
+    { "nome": "Rio Grande do Norte", "sigla": "RN", "capital": "Natal", "regiao": "Nordeste", "populacao": 3560903, "pib_bilhoes": 87.0, "idh": 0.728, "densidade_km2": 67.0 },
+    { "nome": "Piauí", "sigla": "PI", "capital": "Teresina", "regiao": "Nordeste", "populacao": 3347953, "pib_bilhoes": 70.0, "idh": 0.69, "densidade_km2": 13.0 },
+    { "nome": "Alagoas", "sigla": "AL", "capital": "Maceió", "regiao": "Nordeste", "populacao": 3322204, "pib_bilhoes": 75.0, "idh": 0.684, "densidade_km2": 119.0 },
+    { "nome": "Distrito Federal", "sigla": "DF", "capital": "Brasília", "regiao": "Centro-Oeste", "populacao": 2923369, "pib_bilhoes": 320.0, "idh": 0.814, "densidade_km2": 506.0 },
+    { "nome": "Mato Grosso do Sul", "sigla": "MS", "capital": "Campo Grande", "regiao": "Centro-Oeste", "populacao": 2895191, "pib_bilhoes": 178.0, "idh": 0.766, "densidade_km2": 8.1 },
+    { "nome": "Sergipe", "sigla": "SE", "capital": "Aracaju", "regiao": "Nordeste", "populacao": 2338941, "pib_bilhoes": 58.0, "idh": 0.702, "densidade_km2": 106.0 },
+    { "nome": "Rondônia", "sigla": "RO", "capital": "Porto Velho", "regiao": "Norte", "populacao": 1616470, "pib_bilhoes": 63.0, "idh": 0.719, "densidade_km2": 6.8 },
+    { "nome": "Tocantins", "sigla": "TO", "capital": "Palmas", "regiao": "Norte", "populacao": 1607363, "pib_bilhoes": 56.0, "idh": 0.731, "densidade_km2": 5.7 },
+    { "nome": "Acre", "sigla": "AC", "capital": "Rio Branco", "regiao": "Norte", "populacao": 880631, "pib_bilhoes": 23.0, "idh": 0.71, "densidade_km2": 5.3 },
+    { "nome": "Amapá", "sigla": "AP", "capital": "Macapá", "regiao": "Norte", "populacao": 877613, "pib_bilhoes": 22.0, "idh": 0.734, "densidade_km2": 6.1 },
+    { "nome": "Roraima", "sigla": "RR", "capital": "Boa Vista", "regiao": "Norte", "populacao": 631317, "pib_bilhoes": 18.0, "idh": 0.752, "densidade_km2": 2.8 }
+  ]
+}

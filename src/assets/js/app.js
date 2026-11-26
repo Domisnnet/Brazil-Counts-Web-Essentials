@@ -16,10 +16,18 @@ const coresPorRegiao = {
 };
 
 let grafico = null;
+let todosEstados = [];
 
-function criarGrafico(estados) {  // KPIs
-  const total = estados.reduce((s, e) => s + Number(e.populacao), 0);
-  const maior = estados.reduce((a, b) => Number(b.populacao) > Number(a.populacao) ? b : a, estados[0]);
+function populacaoEmMilhoes(e) {
+  const valor = Number(e.populacao);
+  return valor > 1000 ? valor / 1000000 : valor;
+}
+
+function criarGrafico(estados) {
+  const total = estados.reduce((s, e) => s + populacaoEmMilhoes(e), 0);
+  const maior = estados.reduce((a, b) =>
+    populacaoEmMilhoes(b) > populacaoEmMilhoes(a) ? b : a, estados[0]
+  );
   document.getElementById('kpi-total').textContent = total.toFixed(2);
   document.getElementById('kpi-estados').textContent = estados.length;
   document.getElementById('kpi-maior').textContent = maior ? maior.sigla : '-';
@@ -27,7 +35,7 @@ function criarGrafico(estados) {  // KPIs
   const corTexto = dark ? '#e2e8f0' : '#0f172a';
   const corGrade = dark ? '#334155' : '#e2e8f0';
   const labels = estados.map(e => e.sigla);
-  const dados = estados.map(e => Number(e.populacao));
+  const dados = estados.map(e => populacaoEmMilhoes(e));
   const cores = estados.map(e => coresPorRegiao[mapaRegioes[e.sigla]] || '#cccccc98');
   if (grafico) grafico.destroy();
   grafico = new Chart(document.getElementById('popChart'), {
@@ -49,11 +57,9 @@ function criarGrafico(estados) {  // KPIs
         legend: { display: false },
         tooltip: {
           callbacks: {
-            title: (itens) => {
-              const e = estados[itens[0].dataIndex];
-              return `${e.nome} (${e.sigla})`;
-            },
-            label: (item) => ` População: ${item.raw} Milhões`
+            title: (itens) =>
+              { const e = estados[itens[0].dataIndex]; return `${e.nome} (${e.sigla})`; },
+            label: (item) => ` População: ${item.raw.toFixed(2)} Milhões`
           }
         }
       },
@@ -67,12 +73,15 @@ function criarGrafico(estados) {  // KPIs
 
 function carregarEstados() {
   const regiao = document.getElementById('regiao').value;
-  const url = regiao
-    ? `/api/estados?regiao=${encodeURIComponent(regiao)}`
-    : '/api/estados';
-  fetch(url)
+  if (todosEstados.length > 0) {
+    const filtrados = regiao
+      ? todosEstados.filter(e => mapaRegioes[e.sigla] === regiao) : todosEstados;
+    criarGrafico(filtrados); return;
+  }
+  fetch('/src/assets/data/estados.json')
     .then(res => res.json())
-    .then(data => criarGrafico(data.estados || data));
+    .then(data => { todosEstados = data.estados || data; carregarEstados(); }
+  );
 }
 
 document.getElementById('regiao').addEventListener('change', carregarEstados);

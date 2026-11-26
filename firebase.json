@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "src/assets/js/server.js",
+      "src/assets/js/database.js",
+      "paths.js",
+      "package*.json",
+      ".env"
+    ]
+  }
+}

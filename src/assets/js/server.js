@@ -15,8 +15,7 @@ app.get('/api/estados', async (req, res) => {
     const params = [];
     if (regiao) { sql += ' AND regiao = ?'; params.push(regiao); }
     if (busca) { sql += ' AND (nome LIKE ? OR sigla = ? OR capital LIKE ?)';
-      const termo = `%${busca}%`;
-      params.push(termo, busca.toUpperCase(), termo);
+      const termo = `%${busca}%`; params.push(termo, busca.toUpperCase(), termo);
     }
     const ordenacoesPermitidas = {  // Ordenação - só aceita valores permitidos , evita SQL Injection
       populacao_desc: 'populacao DESC',
@@ -45,8 +44,7 @@ app.get('/api/estados', async (req, res) => {
 
 // Detalhe de um estado pela sigla - ex: /api/estados/SP
 app.get('/api/estados/:sigla', async (req, res) => {
-  try {
-    const [rows] = await pool.query(
+  try { const [rows] = await pool.query(
       'SELECT * FROM estados WHERE sigla = ?', [req.params.sigla.toUpperCase()]
     );
     if (rows.length === 0) { return res.status(404).json({ erro: 'Estado não encontrado' }); }
