@@ -28,7 +28,7 @@ function criarGrafico(estados) {  // KPIs
   const corGrade = dark ? '#334155' : '#e2e8f0';
   const labels = estados.map(e => e.sigla);
   const dados = estados.map(e => Number(e.populacao));
-  const cores = estados.map(e => coresPorRegiao[mapaRegioes[e.sigla]] || '#cccccc');
+  const cores = estados.map(e => coresPorRegiao[mapaRegioes[e.sigla]] || '#cccccc98');
   if (grafico) grafico.destroy();
   grafico = new Chart(document.getElementById('popChart'), {
     type: 'bar',

@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS estados (
   nome VARCHAR(45) NOT NULL,
   sigla VARCHAR(2) NOT NULL,
   regiao ENUM('Norte', 'Nordeste', 'Sul', 'Sudeste', 'Centro-Oeste') NOT NULL,
-  populacao DECIMAL(5,2) NOT NULL, -- População em milhões
+  populacao DECIMAL(5,2) NOT NULL, -- População em Milhões
   PRIMARY KEY (id),
   UNIQUE KEY (sigla),
   UNIQUE KEY (nome)
