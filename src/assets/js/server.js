@@ -1,16 +1,14 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('node:path');
+const paths = require('#root/paths');
+const pool = require('#src/assets/js/database');
 require('dotenv').config();
-const pool = require('src/assets/data/database');
 const app = express();
 const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'src')));
-app.get('/api/health', (req, res) => { res.json(
-  { status: 'ok', projeto: 'brazil-counts-web-essentials' });
-});
+app.use('/src', express.static(paths.src));
+app.get('/', (req, res) => { res.sendFile(paths.indexHtml); });
 app.get('/api/estados', async (req, res) => {
   try { const { regiao, busca, ordenar } = req.query;
     let sql = 'SELECT * FROM estados WHERE 1 = 1';
@@ -36,13 +34,12 @@ app.get('/api/estados', async (req, res) => {
       meta: {
         fonte: 'IBGE - Estimativas da População 2024',
         total_populacao: Number(totalRows[0].total_populacao)
-      },
-      total: estados.length,
-      estados
+      }, total: estados.length, estados
     });
   } catch (err) {
-    console.error('Erro em /api/estados:', err.message);
-    res.status(500).json({ erro: 'Falha ao buscar estados' });
+    console.error('Erro em /api/estados:', err.message); res.status(500).json(
+      { erro: 'Falha ao buscar estados' }
+    );
   }
 });
 
@@ -50,8 +47,7 @@ app.get('/api/estados', async (req, res) => {
 app.get('/api/estados/:sigla', async (req, res) => {
   try {
     const [rows] = await pool.query(
-      'SELECT * FROM estados WHERE sigla = ?',
-      [req.params.sigla.toUpperCase()]
+      'SELECT * FROM estados WHERE sigla = ?', [req.params.sigla.toUpperCase()]
     );
     if (rows.length === 0) { return res.status(404).json({ erro: 'Estado não encontrado' }); }
     res.json({ estado: rows[0] });
@@ -63,22 +59,20 @@ app.get('/api/estados/:sigla', async (req, res) => {
 
 // Totais por região
 app.get('/api/regioes', async (req, res) => {
-  try {
-    const [regioes] = await pool.query(
-      `
-        SELECT regiao,
-        COUNT(*) AS estados,
-        SUM(populacao) AS total_populacao,
-        SUM(pib_bilhoes) AS pib_bilhoes
-        FROM estados
-        GROUP BY regiao
-        ORDER BY total_populacao DESC
-      `
+  try { const [regioes] = await pool.query(
+      `SELECT regiao,
+      COUNT(*) AS estados,
+      SUM(populacao) AS total_populacao,
+      SUM(pib_bilhoes) AS pib_bilhoes
+      FROM estados
+      GROUP BY regiao
+      ORDER BY total_populacao DESC`
     );
     res.json({ regioes });
   } catch (err) {
-    console.error('Erro em /api/regioes:', err.message);
-    res.status(500).json({ erro: 'Falha ao buscar regiões' });
+    console.error('Erro em /api/regioes:', err.message); res.status(500).json(
+      { erro: 'Falha ao buscar regiões' }
+    );
   }
 });
 

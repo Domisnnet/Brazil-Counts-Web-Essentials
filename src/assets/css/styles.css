@@ -22,19 +22,33 @@ body {
 
 .topo h1 { margin: 0; font-size: 24px; }
 
-.topo p { margin: 4px 0 0; opacity: .7; font-size: 14px; }
+.topo p { margin: 6px 0 0; opacity: .7; font-size: 1rem; }
 
-#toggle-theme, .icon {
-  font-size: 20px; border: 0; background: #1e293b;
-  color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+#toggle-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 2px;
+  border-radius: 50%;
+  background: #1e293b; color: #fff;
+  cursor: pointer;
 }
+
+#toggle-theme .icon { width: 25px; height: 25px; }
+#toggle-theme .icon.sun { display: none; }
+#toggle-theme .icon.moon { display: block; }
+body.dark-mode #toggle-theme .icon.sun { display: block; }
+body.dark-mode #toggle-theme .icon.moon { display: none; }
+body.dark-mode #toggle-theme { background: #f1f5f9; color: #0f172a; }
 
 .container { max-width: 1000px; margin: 0 auto; padding: 24px; }
 
 .filtros { display: flex; gap: 12px; align-items: center; margin-bottom: 20px; }
 
 .filtros select {
-  padding: 10px 14px; border-radius: 8px; border: 1px solid #cbd5e1;
+  padding: 10px 14px; border-radius: 8px; border: 2px solid #cbd5e1;
   font-size: 15px; background: #fff; cursor: pointer;
 }
 
